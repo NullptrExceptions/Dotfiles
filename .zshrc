@@ -17,7 +17,7 @@ export JAVA_HOME="/usr/lib/jvm/default"
 export GOPATH="$(go env GOPATH)"
 export LIBVA_DRIVER_NAME="radeonsi"
 export PROMPT="%F{green}%n@%m %d $%f"
-export PATH="$JAVA_HOME/bin:$PATH"
+export PATH="/home/harry/.local/bin/statusbar:$JAVA_HOME/bin:$PATH"
 
 #Aliases
 alias ls="ls -la --color=auto"
