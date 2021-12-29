@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# A simple script that will launch a terminal showing system control options
+
+case $BLOCK_BUTTON in
+	1) urxvt -e sh -c ' 
+		echo "1) Poweroff the system"
+		echo "2) Reboot the system"
+		echo "3) exit" 
+		
+		read n
+		case $n in 
+			1) sudo shutdown now ;;
+			2) sudo reboot now ;;
+			3) exit ;;
+			*) exit ;;
+		esac' ;;	
+esac
+
+echo ""
