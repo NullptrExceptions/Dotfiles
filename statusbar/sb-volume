@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# A script to display volume and launch pavucontrol
+
+case $BLOCK_BUTTON in
+	1) pavucontrol ;;
+esac
+
+echo " $(pamixer --get-volume-human)"
