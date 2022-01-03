@@ -4,7 +4,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/USER/.zshrc'
+zstyle :compinstall filename '/home/$USER/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -17,7 +17,7 @@ export JAVA_HOME="/usr/lib/jvm/default"
 export GOPATH="$(go env GOPATH)"
 export LIBVA_DRIVER_NAME="radeonsi"
 export PROMPT="%F{green}%n@%m %d $%f"
-export PATH="/home/harry/.local/bin/statusbar:$JAVA_HOME/bin:$PATH"
+export PATH="/home/$USER/.local/bin/statusbar:$JAVA_HOME/bin:$PATH"
 
 #Aliases
 alias ls="ls -la --color=auto"
