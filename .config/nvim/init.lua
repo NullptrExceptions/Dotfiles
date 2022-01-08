@@ -120,7 +120,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- omnisharp
 local pid = vim.fn.getpid()
-local omnisharp_bin = "/home/harry/Documents/Programming/neovim/omnisharp/run"
+local omnisharp_bin = "Location/to/omnisharp/run"
 require('lspconfig').omnisharp.setup {
 	cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) };
 	capabilities = capabilities }
