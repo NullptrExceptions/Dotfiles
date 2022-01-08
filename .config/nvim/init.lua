@@ -45,9 +45,9 @@ let g:airline_symbols.dirty='D'
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
-let g:vsnip_filetypes = {}
-let g:vsnip_filetypes.javascriptreact = ['javascript']
-let g:vsnip_filetypes.typescriptreact = ['typescript']
+" let g:vsnip_filetypes = {}
+" let g:vsnip_filetypes.javascriptreact = ['javascript']
+" let g:vsnip_filetypes.typescriptreact = ['typescript']
 
 " Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
@@ -115,10 +115,14 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
       { name = 'cmdline' }
     })
   })
-
-  -- Setup lspconfig.
-  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
-    capabilities = capabilities
-  }
+  
+-- Setup lspconfig.
+ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- omnisharp
+local pid = vim.fn.getpid()
+local omnisharp_bin = "/home/harry/Documents/Programming/neovim/omnisharp/run"
+require('lspconfig').omnisharp.setup {
+	cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) };
+	capabilities = capabilities }
+-- pyright
+require('lspconfig').pyright.setup{}
