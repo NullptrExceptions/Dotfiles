@@ -2,9 +2,12 @@
 My config files
 <br>
 <br>
-**Notes**
+**Neovim**
 <br>
-If you are using DWM or any other window manager that is not a compositing window manager, you will need to install xcompmgr and add <code> xcompmgr &</code> at the bottom of your xinitrc file to allow urxvt to be transparent.
+<b>Depends on:</b>
 <br>
+Nerdfornts
 <br>
-My neovim configuration depends on nerd fonts. If they are not installed, it will look broken. It also depends on omnisharp-roslyn.
+Omnisharp-roslyn (For unity completion, use [this guide](https://www.jhonatandasilva.com/published/1623278444))
+<br>
+pyright
