@@ -8,7 +8,7 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 ! General Appearance
 URxvt.saveline: 2048
 URxvt.scrollBar: false
-URxvt.font: xft:LiberationMono:size=10:antialiasing=true
+URxvt.font: xft:LiterationMono Nerd Font:size=10:antialiasing=true
 
 ! Transparency (change value in square brackets to set transparency, in %)
 URxvt.depth: 32
