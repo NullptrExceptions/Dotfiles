@@ -2,6 +2,13 @@
 My config files
 <br>
 <br>
+**URxvt**
+<br>
+<b>Depends on:</b>
+<br>
+Nerd fonts
+</br>
+<br>
 **Neovim**
 <br>
 <b>Depends on:</b>
